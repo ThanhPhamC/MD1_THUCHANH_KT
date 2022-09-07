@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .hv:hover{
+      background-color: #7dff5f;
+    }
+  </style>
+</head>
+<body>
+<H1>Kiểm tra năm sinh theo Can Chi</H1>
+<h2>Nhập năm sinh : </h2>
+<input placeholder=" Nhập số năm sinh" type="text" id="input" value=""><button onclick="kiemTraC()" class="hv">Kết quả</button>
+<h2 id="kq">Tuổi Can Chi là:</h2>
+<script>
+  function kiemTraC() {
+      a =document.getElementById("input").value;
+      let b="";
+      let c="";
+      if (a<=0){alert("Số năm sinh không đúng mời nhập lại")}
+      else{
+switch (a%10) {
+  case 0:
+    b="Canh";
+    break;
+  case 1:
+    b="Tân";
+    break;
+  case 2:
+    b="Nhâm";
+    break;
+  case 3:
+    b="Quý";
+    break;
+  case 4:
+    b="Giáp";
+    break;
+  case 5:
+    b="Ất";
+    break;
+  case 6:
+    b="Bính";
+    break;
+  case 7:
+    b="Đinh";
+    break;
+  case 8:
+    b="Mậu";
+    break;
+  case 9:
+    b="Kỷ";
+    break;
+}
+switch (a%12) {
+  case 0:
+    c="Thân";
+    break;
+  case 1:
+    c="Dậu";
+    break;
+  case 2:
+    c="Tuất";
+    break;
+  case 3:
+    c="Hợi";
+    break;
+  case 4:
+    c="Tý";
+    break;
+  case 5:
+    c="Sửu";
+    break;
+  case 6:
+    c="Dần";
+    break;
+  case 7:
+    c="Mão";
+    break;
+  case 8:
+    c="Thìn";
+    break;
+  case 9:
+    c="Tỵ";
+    break;
+  case 10:
+    c="Ngọ";
+    break;
+  case 11:
+    c="Mùi";
+    break;
+        }
+      } document.getElementById("kq").innerHTML= "Tuổi Can Chi là : "+b+" "+c
+  }
+</script>
+</body>
+</html>

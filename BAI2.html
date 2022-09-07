@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hv:hover{
+            background-color: #7dff5f;
+        }
+    </style>
+</head>
+<body>
+<H1>Kiểm tam giác vuông</H1>
+<h2>Nhập chiều dài 3 cạnh </h2>
+<input placeholder=" Nhập cạnh a" type="text" id="canhA" value="">
+<input placeholder=" Nhập cạnh b" type="text" id="canhB" value="">
+<input placeholder=" Nhập cạnh c" type="text" id="canhC" value=""><button onclick="kiemTra()" class="hv">Kiểm tra</button>
+<h2 id="kq">Kết quả:</h2>
+<script>
+    function kiemTra() {
+        a=+document.getElementById("canhA").value;
+        b=+document.getElementById("canhB").value;
+        c=+document.getElementById("canhC").value;
+        if (a,b,c > 0&& a + b > c && b + c > a && a + c > b ){
+            if (Math.pow(a,2)==Math.pow(b,2)+Math.pow(c,2)
+            ||Math.pow(b,2)==Math.pow(a,2)+Math.pow(c,2)
+            ||Math.pow(c,2)==Math.pow(b,2)+Math.pow(a,2)){
+                document.getElementById("kq").innerHTML="Kết quả : Là 1 tam giác vuông "
+            }else{document.getElementById("kq").innerHTML="Kết quả : Không phải là 1 tam giác vuông"
+            }
+        }else {
+            alert("Kích thước bạn nhập không phải là tam giác, mời nhập lại")
+        }
+    }
+</script>
+</body>
+</html>

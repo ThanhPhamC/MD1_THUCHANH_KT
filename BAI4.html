@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="Chien()">
+<img id="dichuyen" src="NARUTO.gif" alt="naruto" style=" width: 100px; position: absolute;left: 0px; top: 0px " >
+<img src="luffy.jpeg" alt="luffy" id="codinh" style=" width: 100px; position: relative;left: 500px; top:500px">
+<script>
+    var luffy=document.getElementById("codinh");
+    var wNaruto;
+    var hNaruto;
+    var wLyffy;
+    var hLuffy;
+    var a;
+    var b;
+    var c;
+    var d;
+    function len() {
+        var naruto=document.getElementById("dichuyen")
+       naruto.style.top=parseInt(naruto.style.top)-50+ "px";
+        a=parseInt(naruto.style.top);
+        check()
+    }
+    function xuong() {
+        var naruto=document.getElementById("dichuyen")
+        naruto.style.top=parseInt(naruto.style.top)+50+ "px";
+        b=parseInt(naruto.style.top)
+        console.log("====",b)
+        check()
+    }
+    function trai() {
+        var naruto=document.getElementById("dichuyen")
+        naruto.style.left=parseInt(naruto.style.left)-50+ "px";
+        c=parseInt(naruto.style.left)
+        check()
+    }
+    function phai() {
+        var naruto=document.getElementById("dichuyen")
+        naruto.style.left=parseInt(naruto.style.left)+50+ "px";
+        d=parseInt(naruto.style.left)
+        console.log("++++",d)
+        check()
+    }
+    function banPhim(evt) {
+            switch (evt.keyCode) {
+            case 37:
+                trai();
+                break;
+            case 39:
+                phai();
+                break;
+            case 38:
+                len();
+                break;
+            case 40:
+                xuong();
+                break;
+            }
+    }
+    function Chien () {
+        window.addEventListener('keydown', banPhim);
+    }
+    function check() {
+        wNaruto=parseInt(naruto.style.width);
+        hNaruto=parseInt(naruto.style.height);
+        wLyffy=parseInt(luffy.style.width);
+        hLuffy=parseInt(luffy.style.height);
+
+       if (b==500&&d==500){alert("bạn đã chiến thắng")};
+    }
+</script>
+</body>
+</html>
